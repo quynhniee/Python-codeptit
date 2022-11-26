@@ -17,7 +17,7 @@ class Triangle:
         a = self.p1.distance(self.p2)
         b = self.p3.distance(self.p2)
         c = self.p1.distance(self.p3)
-        return 'INVALID' if max(a, b, c) * 2 >= a + b + c else '{:.3f}'.format(a + b + c)
+        return 'INVALID' if max(a, b, c) * 2 >= a + b + c else '{:.2f}'.format(sqrt((a+b+c) * (a+b-c) * (-a+b+c) * (a-b+c)) / 4)
 
 list, t, i = [], int(input()), 0
 for __ in range(t):
